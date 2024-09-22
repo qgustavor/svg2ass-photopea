@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>svg2ass-photopea</title>
+
+<style>
+/* TODO match styles with those from Photopea */
+body {margin: 5% auto; background: #f2f2f2; color: #444444; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; text-shadow: 0 1px 0 #ffffff; max-width: 73%;}
+code {background: white;}
+a {border-bottom: 1px solid #444444; color: #444444; text-decoration: none;}
+label, textarea, input, button {
+display: block;
+width: 100%;
+}
+</style>
+
+<h1>svg2ass</h1>
+
+<div id="app">
+  <label>
+    Output
+    <textarea v-model="output" @click="handleCopy"></textarea>
+  </label>
+
+  <button @click="convert">Convert image into ASS</button>
+
+  <label>
+    Start timestamp
+    <input v-model="start">
+  </label>
+
+  <label>
+    End timestamp
+    <input v-model="end">
+  </label>
+
+  <label>
+    Initial layer
+    <input v-model="initialLayer">
+  </label>
+
+  <label>
+    Style
+    <input v-model="style">
+  </label>
+
+  <label>
+    Actor
+    <input v-model="actor">
+  </label>
+</div>
+
+<script type="module" src="lib\main.js"></script>
