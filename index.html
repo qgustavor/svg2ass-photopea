@@ -5,21 +5,48 @@
 <title>svg2ass-photopea</title>
 
 <style>
-/* TODO match styles with those from Photopea */
-body {margin: 5% auto; background: #f2f2f2; color: #444444; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; text-shadow: 0 1px 0 #ffffff; max-width: 73%;}
-code {background: white;}
-a {border-bottom: 1px solid #444444; color: #444444; text-decoration: none;}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 1em;
+  background: #474747;
+  color: #c7c7c7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color-scheme: dark;
+}
 label, textarea, input, button { display: block; width: 100%; }
 input[type="checkbox"] { display: inline-block; width: auto; }
+textarea {
+  resize: vertical;
+}
+button, input {
+  background: #474747;
+  color: #c7c7c7;
+  border: 1px solid #212121;
+}
+button {
+  padding: 0.5em;
+  border-radius: 0.25em;
+  margin: 0.5em 0;
+}
+button:hover, button:focus {
+  background: #212121;
+}
+input {
+  padding: 0.1em 0.5em;
+  border-radius: 0.25em;
+  margin: 0.1em 0;
+}
+input:focus {
+  outline: 0;
+  border-color: #c7c7c7;
+}
 </style>
 
-<h1>svg2ass</h1>
-
 <div id="app">
-  <label>
-    Output
-    <textarea v-model="output" @click="handleCopy"></textarea>
-  </label>
+  <textarea v-model="output" @click="handleCopy" rows="5" placeholder="Draw some vectors then click the button below to convert it to ASS"></textarea>
 
   <button @click="convert">Convert image into ASS</button>
 
