@@ -43,10 +43,13 @@ input:focus {
   outline: 0;
   border-color: #c7c7c7;
 }
+p {
+  font-size: 0.8em;
+}
 </style>
 
 <div id="app">
-  <textarea v-model="output" @click="handleCopy" rows="5" placeholder="Draw some vectors then click the button below to convert it to ASS"></textarea>
+  <textarea v-model="output" @click="handleCopy" rows="9" placeholder="Draw some vectors then click the button below to convert it to ASS"></textarea>
 
   <button @click="convert">Convert image into ASS</button>
 
@@ -79,6 +82,8 @@ input:focus {
     <input v-model="addPosTag" type="checkbox">
     Add <code>\pos(0,0)</code> automatically
   </label>
+  
+  <p><strong>How to use:</strong> copy image from Aegisub into Photopea, draw signs using vectors, then export those signs back into Aegisub using this plugin.</p>
 </div>
 
 <script type="module" src="lib\main.js"></script>
