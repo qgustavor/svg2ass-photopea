@@ -1,9 +1,5 @@
 {
-  "environment": {
-    "plugins": [{
-      "name": "svg2ass",
-      "url": "https://qgustavor.github.io/svg2ass-photopea/",
-      "icon": "https://qgustavor.github.io/svg2ass-photopea/lib/logo.png"
-    }]
-  }
+  "name": "svg2ass",
+  "url": "https://qgustavor.github.io/svg2ass-photopea/",
+  "icon": "===https://qgustavor.github.io/svg2ass-photopea/lib/logo.png"
 }
